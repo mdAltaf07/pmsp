@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future School - Excellence in Education</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <div>
+                        <h1>progess middle school</h1>
+                        <p class="tagline">Excellence in Education</p>
+                    </div>
+                </div>
+
+                <nav class="desktop-nav">
+                    <a href="#home" onclick="showPage('home')">Home</a>
+                    <a href="#results" onclick="showPage('results')">Results</a>
+                    <a href="#admit-card" onclick="showPage('admit-card')">Admit Card</a>
+                    <a href="#fee-payment" onclick="showPage('fee-payment')">Fee Payment</a>
+                    <a href="#notices" onclick="showPage('notices')">Notices</a>
+                    <a href="#login" onclick="showPage('login')" class="btn-login">Login</a>
+                </nav>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="#home" onclick="showPage('home'); toggleMobileMenu()">Home</a>
+                <a href="#results" onclick="showPage('results'); toggleMobileMenu()">Results</a>
+                <a href="#admit-card" onclick="showPage('admit-card'); toggleMobileMenu()">Admit Card</a>
+                <a href="#fee-payment" onclick="showPage('fee-payment'); toggleMobileMenu()">Fee Payment</a>
+                <a href="#notices" onclick="showPage('notices'); toggleMobileMenu()">Notices</a>
+                <a href="#login" onclick="showPage('login'); toggleMobileMenu()" class="btn-login">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h2>Shaping Tomorrow's Leaders Today</h2>
+                            <p>Join our community of excellence where every child's potential is nurtured through innovative learning and holistic development.</p>
+                            <div class="hero-buttons">
+                                <button class="btn btn-primary" onclick="showPage('login')">Enroll Now</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?w=800" alt="Students">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Access -->
+            <section class="quick-access">
+                <div class="container">
+                    <h2 class="section-title">Quick Access Portal</h2>
+                    <div class="grid-4">
+                        <div class="card" onclick="showPage('results')">
+                            <div class="card-icon green">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Results</h3>
+                            <p>Check your exam results</p>
+                        </div>
+
+                        <div class="card" onclick="showPage('admit-card')">
+                            <div class="card-icon blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                </svg>
+                            </div>
+                            <h3>Admit Card</h3>
+                            <p>Download admit cards</p>
+                        </div>
+
+                        <div class="card" onclick="showPage('fee-payment')">
+                            <div class="card-icon purple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                </svg>
+                            </div>
+                            <h3>Fee Payment</h3>
+                            <p>Pay fees online</p>
+                        </div>
+
+                        <div class="card" onclick="showPage('notices')">
+                            <div class="card-icon orange">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                            </div>
+                            <h3>Notices</h3>
+                            <p>Latest announcements</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about">
+                <div class="container">
+                    <div class="grid-2">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?w=800" alt="School Building" class="rounded-img">
+                        </div>
+                        <div>
+                            <h2>Why Choose Bright Future School?</h2>
+                            <p class="about-desc">With over 5 years of educational excellence, we provide a nurturing environment that fosters academic achievement, character development, and lifelong learning.</p>
+                            <div class="features">
+                                <div class="feature">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h4>Expert Faculty</h4>
+                                        <p>Highly qualified teachers with years of experience</p>
+                                    </div>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h4>Modern Infrastructure</h4>
+                                        <p>State-of-the-art facilities and smart classrooms</p>
+                                    </div>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h4>Holistic Development</h4>
+                                        <p>Focus on academics, sports, arts, and values</p>
+                                    </div>
+                                </div>
+                                <div class="feature">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                    <div>
+                                        <h4>Individual Attention</h4>
+                                        <p>Small class sizes ensuring personalized care</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+
+            <!-- Facilities -->
+            <section class="facilities">
+                <div class="container">
+                    <h2 class="section-title">Top-Class Facilities</h2>
+                    <div class="grid-3">
+                        <div class="facility-card">
+                            <img src="https://images.unsplash.com/photo-1544002176-eacb96b939c9?w=600" alt="Library">
+                            <div class="facility-content">
+                                <h3>Digital Library</h3>
+                                <p>Access to thousands of books and online resources</p>
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="https://images.unsplash.com/photo-1766297247072-93fd815afef3?w=600" alt="Lab">
+                            <div class="facility-content">
+                                <h3>Science Labs</h3>
+                                <p>Fully equipped physics, chemistry, and biology labs</p>
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="https://images.unsplash.com/photo-1565673686362-85864074640a?w=600" alt="Sports">
+                            <div class="facility-content">
+                                <h3>Sports Complex</h3>
+                                <p>Multi-sport facilities and professional coaching</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="container">
+                    <h2>Ready to Join Our Community?</h2>
+                    <p>Give your child the gift of quality education. Admissions are now open for the 2026-27 academic year.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-white" onclick="showPage('login')">Apply Now</button>
+                        <button class="btn btn-outline">Schedule a Visit</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Results Page -->
+        <div id="results" class="page">
+            <section class="page-section">
+                <div class="container-small">
+                    <div class="form-card">
+                        <h1>Check Your Results</h1>
+                        <div id="resultsSearchForm">
+                            <form onsubmit="showResults(event)">
+                                <div class="form-group">
+                                    <label for="resultRoll">Roll Number</label>
+                                    <input type="text" id="resultRoll" placeholder="Enter your roll number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="resultDob">Date of Birth</label>
+                                    <input type="date" id="resultDob" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full">View Results</button>
+                            </form>
+                        </div>
+
+                        <div id="resultsDisplay" style="display: none;">
+                            <div class="info-box">
+                                <div class="grid-2">
+                                    <div>
+                                        <p class="label">Student Name</p>
+                                        <p class="value">John Doe</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Roll Number</p>
+                                        <p class="value">2024001</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Class</p>
+                                        <p class="value">10th Grade</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Result</p>
+                                        <p class="value success">PASS</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Marks Obtained</th>
+                                            <th>Max Marks</th>
+                                            <th>Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>95</td>
+                                            <td>100</td>
+                                            <td><strong>A+</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>92</td>
+                                            <td>100</td>
+                                            <td><strong>A+</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>English</td>
+                                            <td>88</td>
+                                            <td>100</td>
+                                            <td><strong>A</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Social Studies</td>
+                                            <td>90</td>
+                                            <td>100</td>
+                                            <td><strong>A+</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Computer Science</td>
+                                            <td>94</td>
+                                            <td>100</td>
+                                            <td><strong>A+</strong></td>
+                                        </tr>
+                                        <tr class="total-row">
+                                            <td><strong>Total</strong></td>
+                                            <td><strong>459</strong></td>
+                                            <td><strong>500</strong></td>
+                                            <td><strong>91.8%</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="button-group">
+                                <button class="btn btn-primary">Download Result</button>
+                                <button class="btn btn-outline" onclick="resetResults()">Check Another Result</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Admit Card Page -->
+        <div id="admit-card" class="page">
+            <section class="page-section">
+                <div class="container-small">
+                    <div class="form-card">
+                        <h1>Download Admit Card</h1>
+                        <div id="admitSearchForm">
+                            <div class="info-box blue">
+                                <h3>Instructions:</h3>
+                                <ul>
+                                    <li>Enter your Roll Number and Date of Birth to download your admit card</li>
+                                    <li>Carry a printed copy of the admit card to the examination center</li>
+                                    <li>Reach the exam center at least 30 minutes before the exam starts</li>
+                                    <li>Bring a valid photo ID along with the admit card</li>
+                                </ul>
+                            </div>
+                            <form onsubmit="showAdmitCard(event)">
+                                <div class="form-group">
+                                    <label for="admitRoll">Roll Number</label>
+                                    <input type="text" id="admitRoll" placeholder="Enter your roll number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="admitDob">Date of Birth</label>
+                                    <input type="date" id="admitDob" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full">Get Admit Card</button>
+                            </form>
+                        </div>
+
+                        <div id="admitDisplay" style="display: none;">
+                            <div class="admit-card">
+                                <div class="admit-header">
+                                    <h2>Bright Future School</h2>
+                                    <p>Admit Card - Annual Examination 2026</p>
+                                </div>
+                                <div class="grid-2">
+                                    <div>
+                                        <p class="label">Student Name</p>
+                                        <p class="value">John Doe</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Roll Number</p>
+                                        <p class="value">2024001</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Class & Section</p>
+                                        <p class="value">10th Grade - A</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Date of Birth</p>
+                                        <p class="value">15-Jan-2010</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Father's Name</p>
+                                        <p class="value">Robert Doe</p>
+                                    </div>
+                                </div>
+
+                                <div class="exam-center">
+                                    <h3>Examination Center</h3>
+                                    <p>Bright Future School - Main Campus</p>
+                                    <p class="address">123 Education Street, Knowledge City</p>
+                                </div>
+
+                                <h3>Examination Schedule</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Subject</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>March 15, 2026</td>
+                                            <td>Mathematics</td>
+                                            <td>9:00 AM - 12:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March 17, 2026</td>
+                                            <td>Science</td>
+                                            <td>9:00 AM - 12:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March 19, 2026</td>
+                                            <td>English</td>
+                                            <td>9:00 AM - 12:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March 21, 2026</td>
+                                            <td>Social Studies</td>
+                                            <td>9:00 AM - 12:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March 23, 2026</td>
+                                            <td>Computer Science</td>
+                                            <td>9:00 AM - 12:00 PM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="signature">
+                                    <p>Principal's Signature</p>
+                                </div>
+                            </div>
+
+                            <div class="button-group">
+                                <button class="btn btn-primary">Download Admit Card</button>
+                                <button class="btn btn-outline" onclick="resetAdmitCard()">Get Another Admit Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Fee Payment Page -->
+        <div id="fee-payment" class="page">
+            <section class="page-section">
+                <div class="container-small">
+                    <div class="form-card">
+                        <h1>Fee Payment Portal</h1>
+                        <div id="feeSearchForm">
+                            <form onsubmit="showFeeDetails(event)">
+                                <div class="form-group">
+                                    <label for="feeRoll">Student Roll Number</label>
+                                    <input type="text" id="feeRoll" placeholder="Enter student roll number" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full">Check Fee Details</button>
+                            </form>
+                        </div>
+
+                        <div id="feeDetailsDisplay" style="display: none;">
+                            <div class="info-box">
+                                <h3>Student Information</h3>
+                                <div class="grid-2">
+                                    <div>
+                                        <p class="label">Student Name</p>
+                                        <p class="value">John Doe</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Roll Number</p>
+                                        <p class="value">2024001</p>
+                                    </div>
+                                    <div>
+                                        <p class="label">Class</p>
+                                        <p class="value">10th Grade</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Fee Breakdown</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Fee Type</th>
+                                        <th>Amount (₹)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tuition Fee</td>
+                                        <td>15,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Books & Stationery</td>
+                                        <td>2,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uniform</td>
+                                        <td>1,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Transport</td>
+                                        <td>3,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Activities</td>
+                                        <td>1,000</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td><strong>Total Amount</strong></td>
+                                        <td><strong>₹23,000</strong></td>
+                                    </tr>
+                                    <tr class="success-row">
+                                        <td>Amount Paid</td>
+                                        <td>₹0</td>
+                                    </tr>
+                                    <tr class="danger-row">
+                                        <td>Amount Due</td>
+                                        <td>₹23,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="button-group">
+                                <button class="btn btn-outline" onclick="resetFee()">Back</button>
+                                <button class="btn btn-primary" onclick="showPayment()">Proceed to Payment</button>
+                            </div>
+                        </div>
+
+                        <div id="paymentForm" style="display: none;">
+                            <div class="info-box blue">
+                                <p><strong>Amount to Pay: ₹23,000</strong></p>
+                            </div>
+
+                            <form onsubmit="processPayment(event)">
+                                <div class="form-group">
+                                    <label>Payment Method</label>
+                                    <div class="radio-group">
+                                        <label>
+                                            <input type="radio" name="paymentMethod" value="card" checked>
+                                            Credit/Debit Card
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="paymentMethod" value="upi">
+                                            UPI
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="paymentMethod" value="netbanking">
+                                            Net Banking
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="cardDetails">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card Number</label>
+                                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    <div class="grid-2">
+                                        <div class="form-group">
+                                            <label for="expiry">Expiry Date</label>
+                                            <input type="text" id="expiry" placeholder="MM/YY">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" placeholder="123">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardName">Cardholder Name</label>
+                                        <input type="text" id="cardName" placeholder="John Doe">
+                                    </div>
+                                </div>
+
+                                <div class="button-group">
+                                    <button type="button" class="btn btn-outline" onclick="backToFeeDetails()">Back</button>
+                                    <button type="submit" class="btn btn-primary">Pay Now</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="paymentSuccess" style="display: none;">
+                            <div class="success-message">
+                                <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <h2>Payment Successful!</h2>
+                                <p>Your payment of ₹23,000 has been processed successfully.</p>
+                                <div class="transaction-details">
+                                    <p class="label">Transaction ID</p>
+                                    <p class="value" id="transactionId"></p>
+                                    <p class="label">Date & Time</p>
+                                    <p class="value" id="transactionDate"></p>
+                                </div>
+                                <button class="btn btn-primary" onclick="resetFeePayment()">Make Another Payment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Notices Page -->
+        <div id="notices" class="page">
+            <section class="page-section">
+                <div class="container">
+                    <div class="form-card">
+                        <h1>School Notices</h1>
+
+                        <h2 class="notices-heading">📌 Pinned Notices</h2>
+                        <div class="notice pinned">
+                            <div class="notice-header">
+                                <h3>Admissions Open for Academic Year 2026-27</h3>
+                                <span class="badge blue">Admissions</span>
+                            </div>
+                            <p class="notice-date">📅 February 10, 2026</p>
+                            <p>We are pleased to announce that admissions are now open for the academic year 2026-27. Parents can visit the school office or apply online through our portal. Limited seats available!</p>
+                        </div>
+
+                        <div class="notice pinned">
+                            <div class="notice-header">
+                                <h3>Annual Sports Day - March 5, 2026</h3>
+                                <span class="badge purple">Events</span>
+                            </div>
+                            <p class="notice-date">📅 February 8, 2026</p>
+                            <p>Our annual sports day will be held on March 5, 2026. All students are required to participate. Parents are cordially invited to attend the event starting at 8:00 AM.</p>
+                        </div>
+
+                        <h2 class="notices-heading">All Notices</h2>
+                        <div class="notice">
+                            <div class="notice-header">
+                                <h3>Parent-Teacher Meeting Scheduled</h3>
+                                <span class="badge green">Academic</span>
+                            </div>
+                            <p class="notice-date">📅 February 5, 2026</p>
+                            <p>Parent-Teacher Meeting for all classes will be held on February 20, 2026. Parents are requested to meet their child's class teacher between 9:00 AM and 2:00 PM.</p>
+                        </div>
+
+                        <div class="notice">
+                            <div class="notice-header">
+                                <h3>Science Exhibition - February 25, 2026</h3>
+                                <span class="badge purple">Events</span>
+                            </div>
+                            <p class="notice-date">📅 February 3, 2026</p>
+                            <p>Students of classes 6-10 are invited to participate in the Science Exhibition. Registration deadline is February 15, 2026. Contact the science department for details.</p>
+                        </div>
+
+                        <div class="notice">
+                            <div class="notice-header">
+                                <h3>School Timing Change Notice</h3>
+                                <span class="badge gray">General</span>
+                            </div>
+                            <p class="notice-date">📅 February 1, 2026</p>
+                            <p>Due to summer approaching, school timing will change from March 1, 2026. New timing: 7:30 AM to 1:30 PM. Transport timings will be adjusted accordingly.</p>
+                        </div>
+
+                        <div class="notice">
+                            <div class="notice-header">
+                                <h3>Exam Schedule Released</h3>
+                                <span class="badge red">Examination</span>
+                            </div>
+                            <p class="notice-date">📅 January 28, 2026</p>
+                            <p>The final examination schedule for all classes has been released. Students can download the schedule from the Admit Card section. Exams begin from March 15, 2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login" class="page">
+            <section class="login-section">
+                <div class="container-small">
+                    <div class="login-card">
+                        <div class="login-header">
+                            <div class="login-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <h1>Welcome Back</h1>
+                            <p>Sign in to access your portal</p>
+                        </div>
+
+                        <div class="tabs">
+                            <button class="tab active" onclick="switchTab('student')">Student</button>
+                            <button class="tab" onclick="switchTab('parent')">Parent</button>
+                            <button class="tab" onclick="switchTab('staff')">Staff</button>
+                        </div>
+
+                        <form id="studentForm" class="tab-content active" onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label for="studentId">Student ID / Roll Number</label>
+                                <input type="text" id="studentId" placeholder="Enter your student ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentPassword">Password</label>
+                                <input type="password" id="studentPassword" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-footer">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                        </form>
+
+                        <form id="parentForm" class="tab-content" onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label for="parentId">Parent ID</label>
+                                <input type="text" id="parentId" placeholder="Enter your parent ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parentPassword">Password</label>
+                                <input type="password" id="parentPassword" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-footer">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                        </form>
+
+                        <form id="staffForm" class="tab-content" onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label for="staffId">Staff ID</label>
+                                <input type="text" id="staffId" placeholder="Enter your staff ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="staffPassword">Password</label>
+                                <input type="password" id="staffPassword" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-footer">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                        </form>
+
+                        <div class="login-footer">
+                            <p>New admission? <a href="#">Apply Now</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <p>For assistance, contact: <strong>+1 (555) 123-4567</strong></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Bright Future School</h3>
+                    <p>Committed to providing quality education and nurturing young minds for a brighter tomorrow.</p>
+                    <div class="social-links">
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Academic Programs</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Parent Portal</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            pawai panna mp 488446
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                            </svg>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            info@brightfutureschool.edu
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 progess middle school. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
