@@ -4,53 +4,62 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- SEO KEYWORDS -->
-<meta name="keywords" content="Progress Middle School Pawai, school in pawai panna, best school in pawai, middle school panna, Ajij Mohammad school, Nanhi Pawai school, MP school education">
-<meta name="description" content="Progress Middle School Pawai District Panna provides quality education, discipline, sports and cultural development.">
+<meta name="keywords" content="Progress Middle School Pawai, school in pawai panna">
+<meta name="description" content="Progress Middle School Pawai District Panna">
 
 <title>Progress Middle School Pawai</title>
-
-<!-- FAVICON LOGO -->
 <link rel="icon" href="logo.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{margin:0;font-family:Poppins, sans-serif;background:#f4f6fb;color:#222;scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,sans-serif;background:#f4f6fb;color:#222}
 .topbar{background:#0b3d91;color:#fff;padding:6px 15px;text-align:right}
-.topbar select{padding:5px;border-radius:6px;border:none}
-header{background:#0d47a1;color:#fff;padding:15px 20px}
-.header-box{display:flex;align-items:center;justify-content:center;gap:15px}
-.header-box img{width:65px;height:65px;border-radius:50%;background:#fff;padding:4px}
-.header-text{text-align:left}
-.header-text h2{margin:0}
-.header-text p{margin:0;font-size:14px}
-nav{background:#1565c0;padding:12px;text-align:center;position:sticky;top:0;z-index:1000}
-nav a{color:#fff;text-decoration:none;font-weight:600;margin:0 18px}
-section{padding:80px 20px;max-width:1150px;margin:auto;opacity:0;transform:translateY(40px);transition:.6s ease}
-section.show{opacity:1;transform:translateY(0)}
-.hero{background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b') center/cover;height:450px;border-radius:14px;display:flex;align-items:center;justify-content:center}
-.hero h1{background:rgba(0,0,0,.55);color:#fff;padding:22px 35px;border-radius:10px;font-size:36px}
-.facility-bg{background:linear-gradient(rgba(13,71,161,.85),rgba(21,101,192,.85)),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b');background-size:cover;background-position:center;border-radius:14px;color:#fff}
-.card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08);line-height:1.7}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:25px}
-.feature{background:rgba(255,255,255,.15);backdrop-filter:blur(4px);padding:18px;border-radius:10px;text-align:center;font-weight:600}
-.staff-wrap{overflow:hidden}
-.staff{display:flex;gap:18px;width:max-content;animation:scrollStaff 28s linear infinite}
-.staff img{width:260px;border-radius:12px;height:220px;object-fit:cover}
-.gallery-wrap{overflow:hidden}
-.gallery{display:flex;gap:15px;width:max-content;animation:scroll 32s linear infinite}
-.gallery img{height:200px;border-radius:12px}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-@keyframes scrollStaff{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.social a{margin-right:14px;font-size:22px;text-decoration:none}
-.fa-whatsapp{color:#25D366}
-.fa-facebook{color:#1877f2}
-.fa-instagram{color:#e1306c}
-.fa-youtube{color:red}
-.fa-envelope{color:#444}
-.mapbtn{display:inline-block;margin-top:15px;background:#0d47a1;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none}
+header{background:#0d47a1;color:#fff;padding:15px}
+.header-box{display:flex;align-items:center;justify-content:center;gap:12px}
+.header-box img{width:60px;height:60px;border-radius:50%;background:#fff;padding:4px}
+nav{background:#1565c0;padding:12px;text-align:center;position:sticky;top:0}
+nav a{color:#fff;margin:0 14px;text-decoration:none;font-weight:600}
+section{padding:70px 20px;max-width:1100px;margin:auto}
+
+.hero{background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&auto=format') center/cover;height:420px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.hero h1{background:rgba(0,0,0,.5);color:#fff;padding:18px 28px;border-radius:8px}
+
+.facility-bg{background:linear-gradient(rgba(13,71,161,.85),rgba(21,101,192,.85)),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&auto=format');background-size:cover;border-radius:12px;color:#fff}
+
+.card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:20px}
+.feature{background:rgba(255,255,255,.15);padding:15px;border-radius:8px;text-align:center}
+
+.staff{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.staff img{width:100%;height:200px;object-fit:cover;border-radius:10px}
+
+/* LEFT → RIGHT SCROLL GALLERY */
+.gallery-scroll{
+overflow-x:auto;
+display:flex;
+gap:15px;
+padding-bottom:10px;
+scroll-snap-type:x mandatory
+}
+.gallery-scroll img{
+height:200px;
+width:300px;
+object-fit:cover;
+border-radius:10px;
+flex:0 0 auto;
+scroll-snap-align:start
+}
+.gallery-scroll::-webkit-scrollbar{height:8px}
+.gallery-scroll::-webkit-scrollbar-thumb{background:#0d47a1;border-radius:10px}
+
+.social a{margin-right:12px;font-size:22px}
+.mapbtn{display:inline-block;margin-top:15px;background:#0d47a1;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
 footer{background:#0d47a1;color:#fff;text-align:center;padding:18px;margin-top:40px}
 </style>
 </head>
@@ -58,7 +67,7 @@ footer{background:#0d47a1;color:#fff;text-align:center;padding:18px;margin-top:4
 <body>
 
 <div class="topbar">
-Language : 
+Language
 <select id="langSelect">
 <option value="en">English</option>
 <option value="hi">Hindi</option>
@@ -68,9 +77,9 @@ Language :
 <header>
 <div class="header-box">
 <img src="logo.png" loading="lazy">
-<div class="header-text">
+<div>
 <h2 class="lang" data-en="Progress Middle School" data-hi="प्रोग्रेस मिडिल स्कूल">Progress Middle School</h2>
-<p class="lang" data-en="Pawai, District Panna (Madhya Pradesh)" data-hi="पवई, जिला पन्ना (मध्य प्रदेश)">Pawai, District Panna (Madhya Pradesh)</p>
+<p class="lang" data-en="Pawai District Panna" data-hi="पवई जिला पन्ना">Pawai District Panna</p>
 </div>
 </div>
 </header>
@@ -83,104 +92,75 @@ Language :
 <a href="#contact" class="lang" data-en="Contact" data-hi="संपर्क">Contact</a>
 </nav>
 
-<section class="hero show">
-<h1 class="lang" data-en="Quality Education • Bright Future • Strong Values" data-hi="गुणवत्तापूर्ण शिक्षा • उज्ज्वल भविष्य • मजबूत संस्कार">Quality Education • Bright Future • Strong Values</h1>
+<section class="hero">
+<h1 class="lang" data-en="Quality Education Bright Future" data-hi="गुणवत्तापूर्ण शिक्षा उज्ज्वल भविष्य">Quality Education Bright Future</h1>
 </section>
 
 <section id="about">
-<h2 class="lang" data-en="About Our School" data-hi="हमारे विद्यालय के बारे में">About Our School</h2>
+<h2>About</h2>
 <div class="card">
-<p class="lang" data-en="Progress Middle School is a well‑known educational institution of the Pawai region committed to providing quality education along with strong moral values. The school focuses on the overall development of students through academic excellence, discipline, sports participation and cultural activities." data-hi="प्रोग्रेस मिडिल स्कूल पवई क्षेत्र का एक प्रसिद्ध शैक्षणिक संस्थान है जो गुणवत्तापूर्ण शिक्षा के साथ मजबूत नैतिक मूल्यों के विकास के लिए समर्पित है। विद्यालय विद्यार्थियों के समग्र विकास पर ध्यान देता है जिसमें शैक्षणिक उत्कृष्टता, अनुशासन, खेल एवं सांस्कृतिक गतिविधियाँ शामिल हैं।">Progress Middle School is a well‑known educational institution of the Pawai region committed to providing quality education along with strong moral values.</p>
-
-<p class="lang" data-en="We provide a positive and motivating learning environment where students feel confident and inspired to achieve their goals. Our experienced faculty members use modern and practical teaching methods to make learning easy, interesting and effective for every child." data-hi="विद्यालय एक सकारात्मक एवं प्रेरणादायक शिक्षण वातावरण प्रदान करता है जहाँ विद्यार्थी आत्मविश्वास के साथ अपने लक्ष्यों को प्राप्त करने के लिए प्रेरित होते हैं। हमारे अनुभवी शिक्षक आधुनिक एवं व्यवहारिक शिक्षण विधियों का उपयोग करते हैं जिससे सीखना सरल, रोचक और प्रभावी बनता है।">We provide a positive and motivating learning environment where students feel confident and inspired to achieve their goals.</p>
-
-<p class="lang" data-en="The campus offers a safe, friendly and disciplined atmosphere which helps students build strong character and a bright future. Various award distribution programs and co‑curricular activities are organized regularly to encourage student participation and talent development." data-hi="विद्यालय परिसर सुरक्षित, मैत्रीपूर्ण एवं अनुशासित वातावरण प्रदान करता है जो विद्यार्थियों के व्यक्तित्व निर्माण और उज्ज्वल भविष्य के लिए सहायक है। विद्यार्थियों की प्रतिभा को बढ़ावा देने के लिए नियमित रूप से पुरस्कार वितरण कार्यक्रम एवं सह‑पाठयक्रम गतिविधियाँ आयोजित की जाती हैं।">The campus offers a safe, friendly and disciplined atmosphere which helps students build strong character and a bright future.</p>
+<p>Progress Middle School is a trusted educational institution focused on academic excellence and character development.</p>
 </div>
 </section>
 
 <section id="facility" class="facility-bg">
-<h2 class="lang" data-en="School Facilities" data-hi="विद्यालय की सुविधाएँ">School Facilities</h2>
+<h2>Facilities</h2>
 <div class="features">
-<div class="feature lang" data-en="Qualified Teachers" data-hi="योग्य शिक्षक">Qualified Teachers</div>
-<div class="feature lang" data-en="Healthy Environment" data-hi="स्वस्थ वातावरण">Healthy Environment</div>
-<div class="feature lang" data-en="Sports Activities" data-hi="खेल गतिविधियाँ">Sports Activities</div>
-<div class="feature lang" data-en="Student Awards" data-hi="छात्र पुरस्कार">Student Awards</div>
-<div class="feature lang" data-en="Discipline Education" data-hi="अनुशासन शिक्षा">Discipline Education</div>
-<div class="feature lang" data-en="Safe Campus" data-hi="सुरक्षित परिसर">Safe Campus</div>
+<div class="feature">Qualified Teachers</div>
+<div class="feature">Healthy Environment</div>
+<div class="feature">Sports Activities</div>
+<div class="feature">Safe Campus</div>
 </div>
 </section>
 
 <section id="staff">
-<h2 class="lang" data-en="Our Faculty" data-hi="हमारा स्टाफ">Our Faculty</h2>
-<div class="staff-wrap">
+<h2>Faculty</h2>
 <div class="staff">
-<img src="https://images.unsplash.com/photo-1544717305-2782549b5136" loading="lazy">
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" loading="lazy">
-<img src="https://images.unsplash.com/photo-1584999734482-0361aecad844" loading="lazy">
-<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" loading="lazy">
-</div>
+<img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1584999734482-0361aecad844?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format" loading="lazy">
 </div>
 </section>
 
 <section id="gallery">
-<h2 class="lang" data-en="School Gallery" data-hi="विद्यालय गैलरी">School Gallery</h2>
-<div class="gallery-wrap">
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1544717305-2782549b5136" loading="lazy">
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" loading="lazy">
-<img src="https://images.unsplash.com/photo-1584999734482-0361aecad844" loading="lazy">
-<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" loading="lazy">
-<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" loading="lazy">
-<img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643" loading="lazy">
-
-<img src="https://images.unsplash.com/photo-1544717305-2782549b5136" loading="lazy">
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" loading="lazy">
-<img src="https://images.unsplash.com/photo-1584999734482-0361aecad844" loading="lazy">
-<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" loading="lazy">
-<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" loading="lazy">
-<img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643" loading="lazy">
-</div>
+<h2>Gallery</h2>
+<div class="gallery-scroll">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format" loading="lazy">
+<img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&auto=format" loading="lazy">
 </div>
 </section>
 
 <section id="contact">
-<h2 class="lang" data-en="Contact Us" data-hi="संपर्क करें">Contact Us</h2>
+<h2>Contact</h2>
 <div class="card">
 <p><b>Phone :</b> <a href="tel:7067933785">7067933785</a></p>
-<p><b>Email :</b> <a href="mailto:school@gmail.com">xxxxxxxx@gmail.com</a></p>
+<p><b>Email :</b> <a href="mailto:xxxxxxxx@gmail.com">xxxxxxxx@gmail.com</a></p>
 <p class="social">
-<a href="https://wa.me/917067933785" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://wa.me/917067933785"><i class="fa-brands fa-whatsapp"></i></a>
 <a href="#"><i class="fa-brands fa-facebook"></i></a>
 <a href="#"><i class="fa-brands fa-instagram"></i></a>
 <a href="#"><i class="fa-brands fa-youtube"></i></a>
-<a href="mailto:school@gmail.com"><i class="fa-solid fa-envelope"></i></a>
 </p>
-<a class="mapbtn" target="_blank" href="https://maps.app.goo.gl/qdoi8dJfhD1nbtZdA">Open in Google Map</a>
+<a class="mapbtn" href="https://maps.app.goo.gl/qdoi8dJfhD1nbtZdA" target="_blank">Open Map</a>
 </div>
 </section>
 
 <footer>
-© 2026 Progress Middle School Pawai
+© 2026 Progress Middle School
 </footer>
 
 <script>
-// scroll animation
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", ()=>{
-sections.forEach(sec=>{
-const top = sec.getBoundingClientRect().top;
-if(top < window.innerHeight - 80){
-sec.classList.add("show");
-}
-});
-});
-
-// language switch
-const select = document.getElementById("langSelect");
-select.addEventListener("change", ()=>{
-const lang = select.value;
+const select=document.getElementById('langSelect');
+select.addEventListener('change',()=>{
+let lang=select.value;
 document.querySelectorAll('.lang').forEach(el=>{
-el.textContent = el.getAttribute('data-'+lang);
+el.textContent=el.getAttribute('data-'+lang);
 });
 });
 </script>
