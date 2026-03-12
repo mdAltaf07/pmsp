@@ -11,7 +11,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{margin:0;font-family:Poppins,sans-serif;background:#f4f6fb;color:#222}
+/* FULL WEBSITE SOFT BACKGROUND */
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+color:#222;
+background:
+linear-gradient(rgba(245,247,252,.92),rgba(245,247,252,.92)),
+url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600');
+background-size:cover;
+background-attachment:fixed;
+}
+
 header{background:#0d47a1;color:#fff;padding:10px 15px}
 .header-box{display:flex;align-items:center;gap:10px;justify-content:center;text-align:center}
 .header-box img{width:50px;height:50px;border-radius:50%;background:#fff;padding:3px}
@@ -24,8 +35,22 @@ nav a{color:#fff;text-decoration:none;font-weight:600;font-size:14px}
 
 section{padding:60px 15px;max-width:1100px;margin:auto}
 
-.hero{background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200') center/cover;height:340px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+/* HERO OPTIMIZED */
+.hero{
+background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200') center/cover;
+height:300px;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center
+}
 .hero h1{background:rgba(0,0,0,.5);color:#fff;padding:14px 22px;border-radius:8px;font-size:22px;text-align:center}
+
+/* MOBILE HERO FIX */
+@media(max-width:600px){
+.hero{height:220px}
+.hero h1{font-size:18px;padding:10px 14px}
+}
 
 .facility-bg{background:linear-gradient(rgba(13,71,161,.85),rgba(21,101,192,.85)),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200');background-size:cover;border-radius:12px;color:#fff}
 
@@ -148,12 +173,13 @@ footer{background:#0d47a1;color:#fff;text-align:center;padding:18px;margin-top:3
 
 <script>
 const select=document.getElementById('langSelect');
-select.addEventListener('change',()=>{
-let lang=select.value;
-document.querySelectorAll('.lang').forEach(el=>{
-el.textContent=el.getAttribute('data-'+lang);
-});
-});
+function applyLang(lang){
+ document.querySelectorAll('.lang').forEach(el=>{
+  el.textContent = el.getAttribute('data-'+lang);
+ });
+}
+window.addEventListener('DOMContentLoaded',()=>{applyLang('en');});
+select.addEventListener('change',()=>{applyLang(select.value);});
 </script>
 
 </body>
